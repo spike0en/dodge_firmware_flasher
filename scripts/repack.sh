@@ -65,7 +65,7 @@ echo
 
 echo "--- Downloading Firmware Files ---"
 
-echo "Downloading boot category file (-image-boot.7z) from provided URL (Source: spike0en/nothing_archive)..."
+echo "Downloading boot category file (-image-boot.7z) from provided URL (Source: spike0en/oneplus_archive)..."
 aria2c -x5 -d "$TMP_DIR" -o "boot.7z" "$BOOT_URL"
 if [ $? -ne 0 ] || [ ! -f "$TMP_DIR/boot.7z" ]; then
     echo "Failed to download boot category file using aria2c. Exiting..."
@@ -73,7 +73,7 @@ if [ $? -ne 0 ] || [ ! -f "$TMP_DIR/boot.7z" ]; then
 fi
 echo "Boot category file downloaded successfully."
 
-echo "Downloading firmware category file (-image-firmware.7z) from provided URL (Source: spike0en/nothing_archive)..."
+echo "Downloading firmware category file (-image-firmware.7z) from provided URL (Source: spike0en/oneplus_archive)..."
 aria2c -x5 -d "$TMP_DIR" -o "firmware.7z" "$FIRMWARE_URL"
 if [ $? -ne 0 ] || [ ! -f "$TMP_DIR/firmware.7z" ]; then
     echo "Failed to download firmware category file using aria2c. Exiting..."
