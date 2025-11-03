@@ -109,18 +109,12 @@ fi
 echo "Firmware file extracted successfully."
 
 echo "Extracting CN signal fix file..."
-7z x "$TMP_DIR/signal_fix_cn.7z" -o"$TMP_DIR" -y oplusstanvbk.img > /dev/null
+7z x "$TMP_DIR/signal_fix_cn.7z" -o"$SIGNAL_FIX_CN_DIR" -y oplusstanvbk.img > /dev/null
 if [ $? -ne 0 ]; then
     echo "Failed to extract CN signal fix file. Exiting..."
     exit 1
 fi
-echo "CN signal fix file extracted successfully."
-mv "$TMP_DIR/oplusstanvbk.img" "$SIGNAL_FIX_CN_DIR/"
-if [ $? -ne 0 ]; then
-    echo "Failed to move oplusstanvbk.img to signal-fix-cn directory. Exiting..."
-    exit 1
-fi
-echo "oplusstanvbk.img moved to signal-fix-cn directory."
+echo "CN signal fix file extracted successfully to signal-fix-cn directory."
 echo
 
 echo "--- Removing recovery and vbmeta Image Files ---"
