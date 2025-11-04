@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: spike0en
 # SPDX-License-Identifier: MIT
 
-name: Pong Flashable Firmware
+name: Dodge Flashable Firmware
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ on:
         type: string
 
 jobs:
-  pong-firmware-repack:
+  dodge-firmware-repack:
     runs-on: ubuntu-latest
     permissions: write-all
     outputs:
