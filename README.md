@@ -14,7 +14,7 @@
 - A collection of **flashable firmwares** for **OnePlus 13** (`dodge`), supporting all regional variants (`IND` / `EEA` / `GLO` / `CN` / `NA`). 
 - This script is helpful when flashing custom ROM builds that require a specific firmware version but do not ship the same in the build itself.
 - Automatically flashes firmware to **both slots (A/B)**.  
-- Includes **CN model auto-detection**, which flashes `oplusstanvbk.img` from **ColorOS** to fix signal issues on `CN` units running **OxygenOS**.  
+- Includes **CN model auto-detection**, which flashes `oplusstanvbk.img` & `modem.img` from **ColorOS** to fix signal issues on `CN` units running **OxygenOS**.  
 - Safe to use — does **not wipe or modify user data**.  
 - Firmware images are sourced from [oneplus_archive](https://github.com/spike0en/oneplus_archive) and repacked into a compatible flashable template.  
 
@@ -41,3 +41,4 @@ abl, aop_config, aop, bluetooth, cpucp, cpucp_dtb, devcfg, dsp, engineering_cdt,
 ## Credits
 - Nixsuki for the initial version of the Oneplus Flashable Firmwares.
 - [WishmasterFlo](https://github.com/Wishmasterflo) for the [Oneplus Firmware Flasher](https://github.com/Wishmasterflo/Firmware_flasher).
+
