@@ -135,8 +135,8 @@ else
   ui_print "Flashing OxygenOS firmware partitions..."
 fi
 for partition in $firmware_partitions; do
-  if [ "$IS_CN_MODEL" = "true" ] && [ "$partition" = "oplusstanvbk" ]; then
-    ui_print "  Skipping oplusstanvbk for CN model."
+  if [ "$IS_CN_MODEL" = "true" ] && ([ "$partition" = "oplusstanvbk" ] || [ "$partition" = "modem" ]); then
+    ui_print "  Skipping $partition for CN model."
     continue
   fi
   flash_partition $partition ${partition}.img
@@ -169,6 +169,7 @@ if [ "$IS_CN_MODEL" = "true" ]; then
   ui_print " "
   ui_print "Flashing CN model specific signal fix running OxygenOS..."
   flash_partition "oplusstanvbk" "signal-fix-cn/oplusstanvbk.img"
+  flash_partition "modem" "signal-fix-cn/modem.img"
   ui_print "CN model signal fix has been applied!"
 fi
 

@@ -109,7 +109,7 @@ fi
 echo "Firmware file extracted successfully."
 
 echo "Extracting CN signal fix file..."
-7z x "$TMP_DIR/signal_fix_cn.7z" -o"$SIGNAL_FIX_CN_DIR" -y oplusstanvbk.img > /dev/null
+7z x "$TMP_DIR/signal_fix_cn.7z" -o"$SIGNAL_FIX_CN_DIR" -y oplusstanvbk.img modem.img > /dev/null
 if [ $? -ne 0 ]; then
     echo "Failed to extract CN signal fix file. Exiting..."
     exit 1
